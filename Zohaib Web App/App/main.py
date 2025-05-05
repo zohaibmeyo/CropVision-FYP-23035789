@@ -5,7 +5,9 @@ import tensorflow as tf
 import json
 import pickle
 from pathlib import Path
-pip install tensorflow
+python3 -m pip install 'tensorflow[and-cuda]'
+# Verify the installation:
+python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
 
 # ─── HACK: Override Keras’s InputLayer to swallow legacy `batch_shape` ─────────
 from tensorflow.keras.layers import InputLayer as _OrigInputLayer
