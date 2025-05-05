@@ -6,8 +6,6 @@ import json
 import pickle
 from pathlib import Path
 
-pip install tensorflow[and-cuda]
-
 
 # ─── HACK: Override Keras’s InputLayer to swallow legacy `batch_shape` ─────────
 from tensorflow.keras.layers import InputLayer as _OrigInputLayer
